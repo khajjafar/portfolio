@@ -3,6 +3,13 @@ html {
     scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+    .split-line {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text for better readability */
+    }
+}
+
 .split-line {
     display: flex;
     justify-content: space-between; /* Distributes space between the items */
