@@ -3,6 +3,13 @@ html {
     scroll-behavior: smooth;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
     .split-line {
         flex-direction: column; /* Stack items vertically */
