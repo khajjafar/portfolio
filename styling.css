@@ -202,3 +202,16 @@ section h1 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Initial state: invisible and slightly moved down */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When in view: fully visible and in original position */
+.fade-in-element.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}

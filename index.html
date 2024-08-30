@@ -13,33 +13,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/letterK.png" type="image/x-icon">
 	</head>
-	<script>
-		// Function to toggle the menu
-		function toggleMenu() {
-			const navLinks = document.querySelector('.nav-links');
-			navLinks.classList.toggle('active');
-		}
-
-		// Function to close the menu
-		function closeMenu() {
-			const navLinks = document.querySelector('.nav-links');
-			navLinks.classList.remove('active');
-		}
-
-		// Close the menu when clicking outside of it or on the menu toggle button
-		document.addEventListener('click', (e) => {
-			const menu = document.querySelector('.nav-links');
-			const menuToggle = document.querySelector('.menu-icon');
-
-			// Check if the click was outside the menu and the menu toggle button
-			if (!menu.contains(e.target) && !menuToggle.contains(e.target) || menu.contains(e.target)) {
-				closeMenu();
-			}
-		});
-
-	</script>
 
 	<body class="is-preload">
+	<script src="functions.js"></script>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
@@ -304,69 +280,65 @@
 					</section>
 
 				<!-- Tech Skills -->
-					<section id="skills" class="wrapper style1 align-center">
+					<div id="skills" class="wrapper style1 align-center">
 						<div class="inner">
 							<h1>Technical Skills</h1>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
 							<h2 style="text-decoration: underline">Languages</h2>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<img src="images/skills/python.png" alt="Skill Icon" class="skill-icon">
+							<div class="image-grid">
+								<div class="image-item fade-in-element">
+									<img src="images/skills/python.png" alt="Item 1">
 									<h3>Python</h3>
-								</section>
-								<section>
-									<img src="images/skills/java.png" alt="Skill Icon" class="skill-icon">
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/java.png" alt="Item 1">
 									<h3>Java</h3>
-								</section>
-								<section>
-									<img src="images/skills/cLang.png" alt="Skill Icon" class="skill-icon">
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/cLang.png" alt="Item 1">
 									<h3>C</h3>
-								</section>
-								<section>
-									<img src="images/skills/sql.png" alt="Skill Icon" class="skill-icon">
-									<h3>SQL</h3>
-								</section>
-								<section>
-									<img src="images/skills/html.png" alt="Skill Icon" class="skill-icon">
-									<h3>HTML</h3>
-								</section>
-								<section>
-									<img src="images/skills/css.png" alt="Skill Icon" class="skill-icon">
-									<h3>CSS</h3>
-								</section>
-								<section>
-									<img src="images/skills/javascript.png" alt="Skill Icon" class="skill-icon">
-									<h3>JavaScript</h3>
-								</section>
-								<section>
-									<img src="images/skills/matlab.png" alt="Skill Icon" class="skill-icon">
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/matlab.png" alt="Item 1">
 									<h3>Matlab</h3>
-								</section>
-								<section>
-									<img src="images/skills/rLang.png" alt="Skill Icon" class="skill-icon">
-									<h3>R</h3>
-								</section>
-								<section>
-									<img src="images/skills/xml.png" alt="Skill Icon" class="skill-icon">
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/sql.png" alt="Item 1">
+									<h3>SQL</h3>
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/xml.png" alt="Item 1">
 									<h3>XML</h3>
-								</section>
-
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/rLang.png" alt="Item 1">
+									<h3>R</h3>
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/html.png" alt="Item 1">
+									<h3>HTML</h3>
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/css.png" alt="Item 1">
+									<h3>CSS</h3>
+								</div>
+								<div class="image-item fade-in-element">
+									<img src="images/skills/javascript.png" alt="Item 1">
+									<h3>JavaScript</h3>
+								</div>
 							</div>
 						</div>
-					</section>
+					</div>
 
 				<!-- Contact -->
 					<footer id="contact" class="wrapper style1 align-center">
 						<div class="inner">
 							<h1>Contact Me!</h1>
 							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://www.github.com/khajjafar" class="icon brands style2 fa-github" target="_blank"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.linkedin.com/in/keeyon1/" class="icon brands style2 fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:hajjafar.k@northeastern.edu" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
