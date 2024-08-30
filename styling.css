@@ -45,6 +45,14 @@ html {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center align text for better readability */
     }
+    .left {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .right {
+        font-size: 1em;
+        font-weight: bold;
+    }
 }
 
 .split-line {
