@@ -5,12 +5,42 @@ html {
 
 .menu-icon {
     display: none;
-    font-size: 24px;
+    font-size: xx-large;
     cursor: pointer;
-    padding: 10px;
+    padding: 2px;
+    position:relative;
+    z-index: 1001;
 }
 
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: flex; /* Hide the horizontal menu by default on small screens */
+        flex-direction: column; /* Stack items vertically */
+        width: 150px; /* Adjust width as needed */
+        background-color: #ADD8E6; /* Match header color */
+        position: fixed;
+        top: 0;
+        left: -150px; /* Initially hide menu off-screen */
+        transition: left 0.5s ease; /* Smooth sliding effect */
+        height: 100%; /* Full height of the viewport */
+        z-index: 1000; /* Ensure it stays on top */
+        padding-top: 60px;
+    }
+
+    .nav-links.active {
+        left: 0;
+        padding-top: 80px;
+    }
+
+    .nav-links li {
+        margin: 0 20px; /* Add spacing between links */
+        padding-bottom: 10px;
+        display: block; /* Ensure links are displayed in a block (vertical) */
+    }
     .split-line {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center align text for better readability */
@@ -29,9 +59,6 @@ html {
     font-size: 1.2em
 }
 
-.major {
-    /* No additional styles needed for this container */
-}
 .links-container {
     display: flex;
     justify-content: space-between; /* Distributes space evenly between links */
@@ -67,7 +94,7 @@ body {
     width: 100%; /* Make sure the header spans the full width of the page */
     background-color: #ADD8E6; /* Light blue color */
     color: #000;
-    padding: 10px 0;
+    padding: 10px 20px;
     z-index: 1000; /* Ensure the header stays on top of other content */
 }
 
@@ -80,7 +107,7 @@ body {
 
 .nav-links li {
     display: inline; /* Makes the list items sit side by side */
-    margin: 0 15px; /* Adds spacing between the links */
+    margin: 0 30px; /* Adds spacing between the links */
 }
 
 .nav-links a {
