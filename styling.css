@@ -140,8 +140,8 @@ section h1 {
 .skill-icon {
     display: block; /* Make sure the icon is a block element */
     margin: 0 auto 10px; /* Center the icon and add space below it */
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Maintain aspect ratio */
+    width: auto; /* Adjust size as needed */
+    height: 40px; /* Maintain aspect ratio */
 }
 
 /* Optional: Adjust the section layout to ensure icons and text align properly */
