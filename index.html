@@ -7,17 +7,38 @@
 		<title>Keeyon Hajjafar Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="google" content="Keeyon Hajjafar"/>
 		<link rel="stylesheet" href="styling.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="icon" href="images/letterK.png" type="image/x-icon">
 	</head>
 	<script>
+		// Function to toggle the menu
 		function toggleMenu() {
 			const navLinks = document.querySelector('.nav-links');
 			navLinks.classList.toggle('active');
 		}
+
+		// Function to close the menu
+		function closeMenu() {
+			const navLinks = document.querySelector('.nav-links');
+			navLinks.classList.remove('active');
+		}
+
+		// Close the menu when clicking outside of it or on the menu toggle button
+		document.addEventListener('click', (e) => {
+			const menu = document.querySelector('.nav-links');
+			const menuToggle = document.querySelector('.menu-icon');
+
+			// Check if the click was outside the menu and the menu toggle button
+			if (!menu.contains(e.target) && !menuToggle.contains(e.target) || menu.contains(e.target)) {
+				closeMenu();
+			}
+		});
+
 	</script>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
