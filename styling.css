@@ -149,229 +149,56 @@ section h1 {
     text-align: center; /* Center align text */
 }
 
-/* Items (style1) */
+/*For the languages part of skills*/
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 1rem; /* Space between items */
+    padding: 2rem; /* Padding around the grid */
+}
 
-.items.style1 {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
+.image-item {
     display: flex;
-    -moz-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    margin: 3rem 0;
-    position: relative;
+    align-items: center;
+    opacity: 0; /* Start hidden for fade-in effect */
+    transform: translateY(20px); /* Start slightly shifted down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
 }
 
-.items.style1 > * {
-    -moz-flex-grow: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-grow: 0;
-    flex-grow: 0;
-    -moz-flex-shrink: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-shrink: 0;
-    flex-shrink: 0;
-    border-style: none;
-    border-left-width: 1px;
-    border-top-width: 1px;
+.image-item img {
+    width: 40px; /* Size of the image */
+    height: 40px; /* Maintain the size for uniformity */
+    margin-right: 1rem; /* Space between image and text */
+    border-radius: 50%; /* Optional: round images */
 }
 
-.items.style1.big > * {
-    padding: 3.5rem 3.5rem 1.5rem 3.5rem ;
-    width: 50%;
+.image-item span {
+    font-size: 1.2rem; /* Text size */
+    color: #333; /* Text color */
+    font-weight: bold; /* Optional: bold text */
 }
 
-.items.style1.big > *:nth-child(-n + 2) {
-    border-top-width: 0;
+/* Responsive design for smaller screens */
+@media screen and (max-width: 900px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
 }
 
-.items.style1.big > *:nth-child(2n + 1) {
-    border-left-width: 0;
-}
-
-.items.style1.medium > * {
-    padding: 2.1875rem 2.1875rem 0.1875rem 2.1875rem ;
-    width: 20%;
-}
-
-.items.style1.medium > *:nth-child(-n + 3) {
-    border-top-width: 0;
-}
-
-.items.style1.medium > *:nth-child(3n + 1) {
-    border-left-width: 0;
-}
-
-.items.style1.small > * {
-    padding: 1.3125rem 1.3125rem 0.1rem 1.3125rem ;
-    width: 25%;
-}
-
-.items.style1.small > *:nth-child(-n + 4) {
-    border-top-width: 0;
-}
-
-.items.style1.small > *:nth-child(4n + 1) {
-    border-left-width: 0;
-}
-
-@media screen and (max-width: 1280px) {
-
-    .items.style1.small > *:nth-child(-n + 4) {
-        border-top-width: 1px;
+@media screen and (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
     }
-
-    .items.style1.small > *:nth-child(4n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.small > * {
-        padding: 2.1875rem 2.1875rem 0.1875rem 2.1875rem ;
-        width: 33.33333%;
-    }
-
-    .items.style1.small > *:nth-child(-n + 3) {
-        border-top-width: 0;
-    }
-
-    .items.style1.small > *:nth-child(3n + 1) {
-        border-left-width: 0;
-    }
-
-}
-
-@media screen and (max-width: 980px) {
-
-    .items.style1.medium > *:nth-child(-n + 3) {
-        border-top-width: 1px;
-    }
-
-    .items.style1.medium > *:nth-child(3n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.medium > * {
-        padding: 3.5rem 3.5rem 1.5rem 3.5rem ;
-        width: 50%;
-    }
-
-    .items.style1.medium > *:nth-child(-n + 2) {
-        border-top-width: 0;
-    }
-
-    .items.style1.medium > *:nth-child(2n + 1) {
-        border-left-width: 0;
-    }
-
-    .items.style1.small > *:nth-child(-n + 3) {
-        border-top-width: 1px;
-    }
-
-    .items.style1.small > *:nth-child(3n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.small > * {
-        padding: 3.5rem 3.5rem 1.5rem 3.5rem ;
-        width: 50%;
-    }
-
-    .items.style1.small > *:nth-child(-n + 2) {
-        border-top-width: 0;
-    }
-
-    .items.style1.small > *:nth-child(2n + 1) {
-        border-left-width: 0;
-    }
-
 }
 
 @media screen and (max-width: 480px) {
-
-    .items.style1.big > *:nth-child(-n + 2) {
-        border-top-width: 1px;
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
     }
+}
 
-    .items.style1.big > *:nth-child(2n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.big > * {
-        padding: 2.625rem 2.625rem 0.625rem 2.625rem ;
-        width: 100%;
-    }
-
-    .items.style1.big > *:nth-child(-n + 1) {
-        border-top-width: 0;
-    }
-
-    .items.style1.big > *:nth-child(1n + 1) {
-        border-left-width: 0;
-    }
-
-    .items.style1.medium > *:nth-child(-n + 2) {
-        border-top-width: 1px;
-    }
-
-    .items.style1.medium > *:nth-child(2n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.medium > * {
-        padding: 2.625rem 2.625rem 0.625rem 2.625rem ;
-        width: 100%;
-    }
-
-    .items.style1.medium > *:nth-child(-n + 1) {
-        border-top-width: 0;
-    }
-
-    .items.style1.medium > *:nth-child(1n + 1) {
-        border-left-width: 0;
-    }
-
-    .items.style1.small > *:nth-child(-n + 2) {
-        border-top-width: 1px;
-    }
-
-    .items.style1.small > *:nth-child(2n + 1) {
-        border-left-width: 1px;
-    }
-
-    .items.style1.small > * {
-        padding: 2.625rem 2.625rem 0.625rem 2.625rem ;
-        width: 100%;
-    }
-
-    .items.style1.small > *:nth-child(-n + 1) {
-        border-top-width: 0;
-    }
-
-    .items.style1.small > *:nth-child(1n + 1) {
-        border-left-width: 0;
-    }
-
-    .items.style1.big > *, .items.style1.medium > *, .items.style1.small > * {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .items.style1.big > :first-child, .items.style1.medium > :first-child, .items.style1.small > :first-child {
-        padding-top: 0;
-    }
-
-    .items.style1.big > :last-child, .items.style1.medium > :last-child, .items.style1.small > :last-child {
-        padding-bottom: 0;
-    }
-
-    .items.style1.big > :last-child > .inner > :last-child, .items.style1.medium > :last-child > .inner > :last-child, .items.style1.small > :last-child > .inner > :last-child {
-        margin-bottom: 0;
-    }
-
+/* Fade-in effect when items are scrolled into view */
+.image-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
