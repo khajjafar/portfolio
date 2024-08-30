@@ -7639,7 +7639,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			border-style: solid;
+			border-style: none;
 			border-left-width: 1px;
 			border-top-width: 1px;
 		}
@@ -7659,7 +7659,7 @@ input, select, textarea {
 
 		.items.style1.medium > * {
 			padding: 2.1875rem 2.1875rem 0.1875rem 2.1875rem ;
-			width: 33.33333%;
+			width: 20%;
 		}
 
 			.items.style1.medium > *:nth-child(-n + 3) {
