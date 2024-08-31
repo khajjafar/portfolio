@@ -193,6 +193,7 @@ section h1 {
 
 @media screen and (max-width: 480px) {
     .image-grid {
+        align-content: center;
         grid-template-columns: 1fr; /* 1 column on very small screens */
     }
 }
