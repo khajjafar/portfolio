@@ -6885,12 +6885,12 @@ input, select, textarea {
 					display: block;
 					width: 380px;
 					height: 500px;
-					border-radius: 0px;
+					border-radius: 0;
 					object-fit: cover;
 				}
 
 			.gallery.style2 article .caption {
-				border-radius: 0px;
+				border-radius: 0;
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
