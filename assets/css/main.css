@@ -6958,6 +6958,7 @@ input, select, textarea {
 
 			.gallery.style2 article .caption {
 				padding: 2rem;
+				width: 400px;
 			}
 
 		}
