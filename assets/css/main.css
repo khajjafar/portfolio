@@ -6877,7 +6877,7 @@ input, select, textarea {
 
 			.gallery.style2 article .image {
 				display: block;
-				width: 380px; /* set a fixed width */
+				width: 400px; /* set a fixed width */
 				height: auto; /* set a fixed height */
 				object-fit: cover; /* ensure images cover the area without distortion */
 				border-radius: 0;
@@ -6885,7 +6885,7 @@ input, select, textarea {
 
 				.gallery.style2 article .image img {
 					display: block;
-					width: 380px;
+					width: 400px;
 					height: 500px;
 					border-radius: 0;
 					object-fit: cover;
