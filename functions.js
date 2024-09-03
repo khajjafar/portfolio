@@ -54,18 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Variables to keep track of clicks
     let clickCount = 0;
     const gifContainer = document.getElementById("gifContainer");
-    const liElement = document.getElementById("hiddenButton");
+    const liElement = document.querySelectorAll(".hiddenButton");
     const closeButton = document.getElementById("closeButton");
 
     // Event listener for clicks on the <li> element
-    liElement.addEventListener("click", function () {
-        event.preventDefault(); // Prevents the default action (if any) for the <a> tag
-        clickCount++;
-        // Check if clicked 5 times
-        if (clickCount === 5) {
-            // Show the GIF
-            gifContainer.style.display = "block";
-        }
+    liElement.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents the default action (if any) for the <a> tag
+            clickCount++;
+            // Check if clicked 5 times
+            if (clickCount === 5) {
+                // Show the GIF
+                gifContainer.style.display = "block";
+            }
+        });
     });
 
     closeButton.addEventListener("click", function () {
