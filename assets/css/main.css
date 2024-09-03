@@ -6885,7 +6885,7 @@ input, select, textarea {
 					display: block;
 					width: 380px;
 					height: 500px;
-					border-radius: 20px;
+					border-radius: 0px;
 					object-fit: cover;
 				}
 
