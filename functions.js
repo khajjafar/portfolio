@@ -21,7 +21,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.image-item');
     let delay = 0;
 
@@ -40,12 +40,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-                                                  threshold: 0.1 // Trigger when 10% of the item is visible
-                                              });
+        threshold: 0.1 // Trigger when 10% of the item is visible
+    });
 
     // Observe each image-item
     items.forEach((item) => {
         observer.observe(item);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Variables to keep track of clicks
+    let clickCount = 0;
+    const gifContainer = document.getElementById("gifContainer");
+    const liElement = document.getElementById("hiddenButton");
+    const closeButton = document.getElementById("closeButton");
+
+    // Event listener for clicks on the <li> element
+    liElement.addEventListener("click", function () {
+        event.preventDefault(); // Prevents the default action (if any) for the <a> tag
+        clickCount++;
+        // Check if clicked 5 times
+        if (clickCount === 5) {
+            // Show the GIF
+            gifContainer.style.display = "block";
+        }
+    });
+
+    closeButton.addEventListener("click", function () {
+        gifContainer.style.display = "none";
+        clickCount = 0;
+    });
+});
+
+
 

@@ -220,3 +220,38 @@ section h1 {
     opacity: 1;
     transform: translateY(0);
 }
+
+#gifContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+#gifContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+#gifContainer h3 {
+    color: #fff;
+}
+
+#closeButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
