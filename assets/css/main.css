@@ -6868,23 +6868,29 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			overflow: hidden;
-			width: 22.5rem;
+			width: auto;
+			height: 500px;
 			max-width: 75vw;
 		}
 
 			.gallery.style2 article .image {
 				display: block;
-				width: 100%;
+				width: 400px; /* set a fixed width */
+				height: auto; /* set a fixed height */
+				object-fit: cover; /* ensure images cover the area without distortion */
 				border-radius: 0;
 			}
 
 				.gallery.style2 article .image img {
 					display: block;
-					width: 100%;
-					border-radius: 0;
+					width: 400px;
+					height: 500px;
+					border-radius: 20px;
+					object-fit: cover;
 				}
 
 			.gallery.style2 article .caption {
+				border-radius: 20px;
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
@@ -6911,7 +6917,7 @@ input, select, textarea {
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0, 0, 0, 0.5);
+				background-color: rgba(0, 0, 0, 0.75);
 				opacity: 0;
 				padding: 3rem;
 				z-index: 1;
