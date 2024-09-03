@@ -6890,7 +6890,7 @@ input, select, textarea {
 				}
 
 			.gallery.style2 article .caption {
-				border-radius: 20px;
+				border-radius: 0px;
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
