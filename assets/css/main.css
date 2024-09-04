@@ -6880,19 +6880,19 @@ input, select, textarea {
 				width: 380px; /* set a fixed width */
 				height: auto; /* set a fixed height */
 				object-fit: cover; /* ensure images cover the area without distortion */
-				border-radius: 0;
+				border-radius: 10px;
 			}
 
 				.gallery.style2 article .image img {
 					display: block;
 					width: 380px;
 					height: 500px;
-					border-radius: 0;
+					border-radius: 10px;
 					object-fit: cover;
 				}
 
 			.gallery.style2 article .caption {
-				border-radius: 0;
+				border-radius: 10px;
 				-moz-align-items: center;
 				-webkit-align-items: center;
 				-ms-align-items: center;
